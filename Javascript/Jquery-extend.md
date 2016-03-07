@@ -3,4 +3,6 @@
 ##sub-folder:  Javascript
 
 Turns out you can call a function inside of another one pretty simply using jQuery. You can even pass in arguements, as in:
-`$.extend(this, originalFn.call(this, element));
+```javascript
+$.extend(this, originalFn.call(this, element));
+```
