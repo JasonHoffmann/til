@@ -4,6 +4,7 @@
 
 Kind of a nifty trick for maintaining aspect ratios. If you're setting up, let's say, a featured image that needs to keep a certain aspect ratio, one way to do it might be to set up an image as a background-image on an element and then set the height. So it would be something like this
 
+````bash
 _______________________
 |                     |
 |       BOXED         |
@@ -11,6 +12,7 @@ _______________________
 |                     |
 |_____________________|
 ----text underneath ----
+````
 
 ````css
 .boxed-image {
