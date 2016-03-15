@@ -43,23 +43,7 @@ Then this applies the above function to the content if we are on a single post, 
  */
  function insert_callout_into_content( $content ) {
 
- 	$most_recent_giveaway = new WP_Query( array( 
- 		'post_type' => 'giveaways',
- 		'posts_per_page' => 1
- 		) );
- 	if( $most_recent_giveaway->have_posts() ) {
- 		while( $most_recent_giveaway->have_posts() ) {
- 			$most_recent_giveaway->the_post(); 
- 			$isbn = get_field( 'isbn' );
- 			$book = new RandomHouse;
- 			$book = $book->book( array( 'id' => $isbn ) );
- 			$blurb = get_field('giveaways_blurb');
- 		}
- 	}
-
- 	ob_start();
- 	render_template( 'giveaway-callout.php', array( 'book' => $book, 'blurb' => $blurb ) );
- 	$code = ob_get_clean();
+ 	$code = '<div>CODE TO INSERT</div>;
 
  	if( is_single() && !is_admin() ) {
  		return insert_into_middle_of_content( $code, $content );
