@@ -43,7 +43,7 @@ Then this applies the above function to the content if we are on a single post, 
  */
  function insert_callout_into_content( $content ) {
 
- 	$code = '<div>CODE TO INSERT</div>;
+ 	$code = '<div>CODE TO INSERT</div>';
 
  	if( is_single() && !is_admin() ) {
  		return insert_into_middle_of_content( $code, $content );
